@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamilyGuard Premium - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-left">
+                <h1>FamilyGuard Premium</h1>
+                <p>Dashboard Pemantauan Keluarga Canggih</p>
+            </div>
+            <div class="header-right">
+                <a href="/logout" class="btn btn-logout">Logout</a>
+            </div>
+        </header>
+
+        <nav class="sidebar">
+            <ul class="nav-menu">
+                <li class="nav-item active"><a href="/">📊 Dashboard</a></li>
+                <li class="nav-item"><a href="/anak">👶 Kelola Anak</a></li>
+                <li class="nav-item"><a href="/alerts">🔔 Notifikasi</a></li>
+                <li class="nav-item"><a href="/settings">⚙️ Pengaturan</a></li>
+                <li class="nav-item"><a href="#">📈 Laporan</a></li>
+                <li class="nav-item"><a href="#">🛡️ Keamanan</a></li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h2>Selamat Datang di FamilyGuard Premium</h2>
+                <p>Pantau dan lindungi keluarga Anda dengan fitur canggih</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👶</div>
+                    <div class="stat-info">
+                        <h3>Jumlah Anak</h3>
+                        <div class="stat-number" id="total-children">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <div class="stat-info">
+                        <h3>Lokasi Terpantau</h3>
+                        <div class="stat-number" id="total-locations">0</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-info">
+                        <h3>Screen Time Hari Ini</h3>
+                        <div class="stat-number" id="total-screen-time">0j</div>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔔</div>
+                    <div class="stat-info">
+                        <h3>Notifikasi Baru</h3>
+                        <div class="stat-number" id="total-alerts">0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="card map-card">
+                    <h3>📍 Peta Lokasi Real-time</h3>
+                    <div class="map-container" id="map">
+                        <p>Memuat peta lokasi...</p>
+                    </div>
+                </div>
+
+                <div class="card activities-card">
+                    <h3>📊 Aktivitas Terbaru</h3>
+                    <div class="activities-list" id="activities-list">
+                        <p>Memuat aktivitas...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div class="card screen-time-card">
+                    <h3>⏱️ Screen Time Analysis</h3>
+                    <div class="chart-container">
+                        <canvas id="screenTimeChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card alerts-card">
+                    <h3>🔔 Notifikasi Terkini</h3>
+                    <div class="alerts-list" id="alerts-list">
+                        <p>Memuat notifikasi...</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/map.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+</body>
+</html>
+EOL
