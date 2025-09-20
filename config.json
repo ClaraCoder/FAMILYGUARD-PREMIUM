@@ -1,0 +1,41 @@
+{
+    "server": {
+        "port": 5000,
+        "host": "0.0.0.0",
+        "debug": false,
+        "secret_key": "familyguard_premium_2024_secure_key"
+    },
+    "database": {
+        "path": "/data/data/com.termux/files/home/familyguard/familyguard.db",
+        "backup_path": "/data/data/com.termux/files/home/familyguard/backups"
+    },
+    "security": {
+        "admin_password": "family123",
+        "encryption_key": "2vsgpLoeBlbUAyg06UXtSqi39rf_65FcjNWGtqfLRH61iY35n",
+        "session_timeout": 3600,
+        "login_attempts": 5
+    },
+    "features": {
+        "location_tracking": true,
+        "geofencing": true,
+        "screen_time_limits": true,
+        "app_blocking": true,
+        "content_filtering": true,
+        "sos_alert": true,
+        "call_monitoring": true,
+        "message_monitoring": true
+    },
+    "notifications": {
+        "email_alerts": false,
+        "push_notifications": true,
+        "sms_alerts": false,
+        "alert_sound": true
+    },
+    "limits": {
+        "max_children": 5,
+        "location_history_days": 30,
+        "max_screen_time": 240,
+        "app_block_hours": "22:00-06:00"
+    }
+}
+EOL
