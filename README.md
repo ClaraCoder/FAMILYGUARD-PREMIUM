@@ -55,3 +55,29 @@ cd ~/familyguard
 # Buat subdirektori
 mkdir -p templates static/css static/js static/img modules
 ```
+
+** Jalankan Aplikasi **
+
+Setelah semua file dibuat, jalankan perintah berikut:
+
+```bash
+# Setup database
+cd ~/familyguard
+python setup_database.py
+
+# Jalankan aplikasi
+python app.py
+```
+
+Aplikasi akan berjalan di http://localhost:5000. Gunakan password default family123 untuk login.
+
+Fitur Premium FamilyGuard:
+
+1. Dashboard Elegant - Antarmuka modern dengan statistik real-time
+2. Pelacakan Lokasi Canggih - Dengan geofencing dan notifikasi
+3. Manajemen Screen Time - Pantau dan batasi waktu layar
+4. Filter Konten - Blokir konten tidak pantas
+5. Sistem Alert - Notifikasi real-time untuk aktivitas mencurigakan
+6. Laporan Detail - Analisis penggunaan perangkat
+7. Multi-Device Support - Pantau beberapa perangkat sekaligus
+8. Keamanan Tingkat Tinggi - Enkripsi data dan autentikasi aman
