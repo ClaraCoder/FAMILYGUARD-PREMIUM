@@ -1,6 +1,5 @@
 mkdir -p static/css
 
-cat > static/css/style.css << 'EOL'
 :root {
     --primary: #3498db;
     --primary-dark: #2980b9;
